@@ -1,5 +1,5 @@
 {
-  "name": "license-report",
+  "name": "license-report-with-proxy",
   "version": "6.8.0",
   "description": "creates a short report about project's dependencies (license, url etc)",
   "main": "index.js",
@@ -16,21 +16,23 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kessler/license-report"
+    "url": "https://github.com/daschaa/license-report-with-proxy"
   },
-  "author": "Yaniv Kessler",
+  "author": "daschaa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kessler/license-report/issues"
+    "url": "https://github.com/daschaa/license-report-with-proxy/issues"
   },
-  "homepage": "https://github.com/kessler/license-report",
+  "homepage": "https://github.com/daschaa/license-report-with-proxy",
   "dependencies": {
     "@kessler/tableify": "^1.0.2",
     "debug": "^4.4.3",
     "eol": "^0.10.0",
     "find-up-simple": "^1.0.1",
     "got": "^14.4.9",
+    "https-proxy-agent": "^7.0.6",
     "ini": "^5.0.0",
+    "proxy-agent": "^6.5.0",
     "rc": "^1.2.8",
     "semver": "^7.7.2",
     "tablemark": "^4.0.0",

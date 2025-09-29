@@ -4,7 +4,8 @@ import createDebugMessages from 'debug';
 
 import { config } from '../../lib/config.js';
 import { joinUrlPath } from '../../lib/util.js';
-
+import { ProxyAgent } from 'proxy-agent';
+import { HttpsProxyAgent } from 'https-proxy-agent';
 const debug = createDebugMessages('license-report:expectedOutput');
 
 /**
@@ -24,6 +25,14 @@ async function addRemoteData(dependency) {
   const options = {
     retry: config.httpRetryOptions,
     timeout: config.httpTimeoutOptions,
+    agent: {
+      http: new ProxyAgent({
+        proxy: process.env.HTTP_PROXY,
+      }),
+      https: new HttpsProxyAgent({
+        proxy: process.env.HTTPS_PROXY,
+      }),
+    },
     hooks: {
       beforeRetry: [
         // eslint-disable-next-line no-unused-vars
