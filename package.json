@@ -1,6 +1,6 @@
 {
   "name": "license-report-with-proxy",
-  "version": "6.8.0",
+  "version": "7.0.0",
   "description": "creates a short report about project's dependencies (license, url etc)",
   "main": "index.js",
   "scripts": {
